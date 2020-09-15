@@ -182,4 +182,3 @@ def upload_product_file_loc(instance, filename):
         slug = unique_slug_generator(instance.product)
     location = "product/{slug}/{id}/".format(slug=slug, id=id_)
     return location + filename  # "path/to/filename.mp4"
-

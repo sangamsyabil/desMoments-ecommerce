@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/3.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
-
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -26,7 +26,11 @@ SECRET_KEY = 'g_dalnm3s=ce=3g1g1u%w-+(#zz2#ax4ipu=#h*2xe(b85cp_t'
 DEBUG = True
 
 ALLOWED_HOSTS = []
+MANAGERS = (
+    ('Hem Raj Regmi', "sangamsyabil@gmail.com"),
+)
 
+ADMINS = MANAGERS
 
 # Application definition
 
@@ -124,22 +128,39 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': (
+        # 'rest_framework.permissions.IsAuthenticated',
+        'rest_framework.permissions.IsAuthenticatedOrReadOnly',
+    ),
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        # 'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.BasicAuthentication',
+    ),
+}
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
-
 TIME_ZONE = 'UTC'
-
 USE_I18N = True
-
 USE_L10N = True
-
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static_files"),
+]
+
+MEDIA_URL = '/media/'
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static_cdn', 'static_root')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static_cdn', 'media_root')
+PROTECTED_ROOT = os.path.join(BASE_DIR, 'static_cdn', 'protected_media_root')
+VENV_PATH = os.path.join(BASE_DIR)

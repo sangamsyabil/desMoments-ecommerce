@@ -20,9 +20,15 @@ python manage.py runserver
 Open your browser to http://localhost:8000 and you should see the browsable version of the API.
 
 # API Reference
-###Product List View:
-**Request:** `GET` /api/products/list 
->Response:
+Index: 
+* Product
+    * [List](#product-list-view)
+    * [Category](#product-category-view)
+    * [Brand](#product-brand-view)
+
+### Product List View
+**Request:** `GET /api/products/list`
+> Response:
 ```
 [
     {
@@ -63,8 +69,33 @@ Open your browser to http://localhost:8000 and you should see the browsable vers
 ]
 ```
 
-**Request:** `GET` /api/products/category
->Response:
+**Request:** `GET /api/products/list/{slug}`
+> Response: /api/products/list/himalayan-pashmina
+```
+[
+    {
+        "id": 1,
+        "title": "Himalayan pashmina",
+        "slug": "himalayan-pashmina",
+        "label": "B",
+        "price": "19.99",
+        "discount_price": "9.99",
+        "description": "Empty description",
+        "image": "http://127.0.0.1:8000/products/3267722999/3267722999.png",
+        "quantity": 10,
+        "featured": true,
+        "active": true,
+        "timestamp": "2020-09-15T16:40:25.872894Z",
+        "is_digital": false,
+        "subcategory": 1,
+        "brand": 1
+    }
+]
+```
+
+### Product Category View
+**Request:** `GET /api/products/category`
+> Response:
 ```
 [
     {
@@ -79,8 +110,9 @@ Open your browser to http://localhost:8000 and you should see the browsable vers
 ]
 ```
 
-**Request:** `GET` /api/products/brand 
->Response:
+### Product Brand View
+**Request:** `GET /api/products/brand`
+> Response:
 ```
 [
     {
