@@ -65,3 +65,8 @@ yarn build
 ```
 yarn eject
 ```
+
+README for
+
+- [backend](backend/README.md)
+- [frontend](frontend/README.md)
