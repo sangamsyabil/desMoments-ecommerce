@@ -1,6 +1,5 @@
 import { CircularProgress, makeStyles } from '@material-ui/core';
 import React from 'react';
-import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 import { CustomTheme } from '../../theme/muiTheme';
 
 export interface LoadingScreenProps {}
