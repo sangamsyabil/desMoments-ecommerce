@@ -1,8 +1,6 @@
 # desMoments-ecommerce
 
-### Run the application [backend]
-
-### Setup and installation
+## Getting Started
 Simply from command line:
 ```shell script
 git clone https://github.com/sangamsyabil/desMoments-ecommerce.git
@@ -20,7 +18,7 @@ Index:
 ### Product List View
 **Request:** `GET /api/products/list`
 > Response:
-```
+```json
 [
     {
         "id": 1,
@@ -56,13 +54,13 @@ Index:
         "subcategory": 1,
         "brand": 1
     },
-    ...
+    "..."
 ]
 ```
 
 **Request:** `GET /api/products/list/{slug}`
 > Response: /api/products/list/himalayan-pashmina
-```
+```json
 [
     {
         "id": 1,
@@ -87,7 +85,7 @@ Index:
 ### Product Category View
 **Request:** `GET /api/products/category`
 > Response:
-```
+```json
 [
     {
         "id": 1,
@@ -97,14 +95,14 @@ Index:
         "id": 2,
         "name": "Lenga"
     },
-    ...
+    "..."
 ]
 ```
 
 ### Product Brand View
 **Request:** `GET /api/products/brand`
 > Response:
-```
+```json
 [
     {
         "id": 1,
@@ -114,6 +112,6 @@ Index:
         "id": 2,
         "name": "Bangali"
     },
-    ...
+    "..."
 ]
 ```

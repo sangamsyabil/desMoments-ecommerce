@@ -57,68 +57,13 @@ The Frontend of this covid tracker build mainly on React along with some other i
 <!-- GETTING STARTED -->
 
 ## Getting Started
-
-This is just simple guide incase if you wish to run this locally
-
-### Prerequisites
-
-You can either go with Yarn (version-1) or NPM. I personally like Yarn so I describe accordingly. Kindly follow the corresponding npm command incase if you use npm
-
-- Yarn / npm
-
-```sh
-npm install yarn
-```
-
-### Installation
-
-1. Clone the repo
-
-```sh
+Simply from command line:
+```shell script
 git clone https://github.com/sangamsyabil/desMoments-ecommerce.git
+docker-compose up 
 ```
+Open your browser to http://127.0.0.1:3000
 
-2. Change the directory to frontend/
-
-```sh
-cd frontend
-```
-
-3. Install Node packages packages
-
-```sh
-yarn
-```
-
-4. Start localhost development server
-
-```sh
-yarn start
-```
-
-5. Testing
-
-```sh
-yarn test
-```
-
-6. For prettier
-
-```sh
-yarn prettier:fix
-```
-
-7. For production build
-
-```sh
-yarn build
-```
-
-8. Eject the application (At your own risk)
-
-```
-yarn eject
-```
 
 <!-- CONTACT -->
 
