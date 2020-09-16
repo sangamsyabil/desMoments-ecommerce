@@ -2,22 +2,12 @@
 
 ### Run the application [backend]
 
-### Setup
-Create and activate a virtual environment (Python3) using your preferred method. 
-
-Note: This functionality is [built into](https://docs.python.org/3/tutorial/venv.html) Python, if you do not have a preference.
-
-### Installation
->From the command line
-
+### Setup and installation
+Simply from command line:
+```dockerfile
+docker-compose up 
 ```
-git@github.com:sangamsyabil/desMoments-ecommerce.git
-cd backend
-pip install -r requirements.txt
-python manage.py migrate
-python manage.py runserver
-```
-Open your browser to http://localhost:8000 and you should see the browsable version of the API.
+Open your browser to http://127.0.0.1:8000 and you should see the browsable version of the API.
 
 # API Reference
 Index: 
