@@ -56,8 +56,19 @@ let muiTheme: Theme = createMuiTheme({
       },
     },
   },
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 769,
+      md: 960,
+      lg: 1280,
+      xl: 1920,
+    },
+  },
   typography: {
     fontFamily: "'Alegreya Sans', sans-serif",
+    fontWeightBold: 600,
+    fontWeightRegular: 400,
     button: {
       textTransform: 'none',
       fontWeight: 'normal',
