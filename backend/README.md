@@ -4,7 +4,8 @@
 
 ### Setup and installation
 Simply from command line:
-```dockerfile
+```shell script
+git clone https://github.com/sangamsyabil/desMoments-ecommerce.git
 docker-compose up 
 ```
 Open your browser to http://127.0.0.1:8000 and you should see the browsable version of the API.
