@@ -1,5 +1,5 @@
 FROM node:alpine
-MAINTAINER Hem Raj Regmi <sangamsyabil@gmail.com>
+MAINTAINER Shaikh Zeeshan Murshed <sk.zeeshan1992@gmail.com>
 WORKDIR /app
 COPY package.json .
 RUN yarn install
