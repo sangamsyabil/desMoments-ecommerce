@@ -1,16 +1,13 @@
-import random
 import os
-from django.conf import settings
-from django.core.files.storage import FileSystemStorage
-
-from django.db import models
-from django.db.models import Q
-from django.db.models.signals import pre_save, post_save
-from django.urls import reverse
+import random
 
 # from desSyabil.aws.download.utils import AWSDownload
 # from desSyabil.aws.utils import ProtectedS3Storage
-from backend.utils import unique_slug_generator, get_filename
+from backend.utils import unique_slug_generator
+from django.db import models
+from django.db.models import Q
+from django.db.models.signals import pre_save
+from django.urls import reverse
 
 LABEL_CHOICES = (
     ('N', 'new'),
@@ -26,8 +23,6 @@ def get_filename_ext(filepath):
 
 
 def upload_image_path(instance, filename):
-    # print(instance)
-    # print(filename)
     new_filename = random.randint(1, 3910209312)
     name, ext = get_filename_ext(filename)
     final_filename = '{new_filename}{ext}'.format(new_filename=new_filename, ext=ext)
@@ -111,7 +106,6 @@ class Product(models.Model):
     title = models.CharField(max_length=120)
     slug = models.SlugField(blank=True, unique=True)
 
-    # category = models.ForeignKey(Category, blank=False, on_delete=models.CASCADE)
     subcategory = models.ForeignKey(SubCategory, blank=False, on_delete=models.CASCADE)
     label = models.CharField(choices=LABEL_CHOICES, max_length=1, blank=True)
     brand = models.ForeignKey(Brand, blank=True, on_delete=models.CASCADE)
