@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`LoadingScreen renders correctly 1`] = `
+exports[`App renders correctly 1`] = `
 <DocumentFragment>
   <div
     class="makeStyles-loaderContainer-1"

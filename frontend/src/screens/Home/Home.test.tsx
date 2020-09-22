@@ -1,8 +1,8 @@
 import { render } from '@testing-library/react';
 import React from 'react';
-import { App } from './App';
+import Home from './Home';
 
-test('App renders correctly', () => {
-  const { asFragment } = render(<App />);
+test('Text renders correctly', () => {
+  const { asFragment } = render(<Home />);
   expect(asFragment()).toMatchSnapshot();
 });

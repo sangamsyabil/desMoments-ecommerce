@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiBox-root MuiBox-root-2 makeStyles-container-1"
+  >
+    <span
+      class="MuiTypography-root makeStyles-text-3 makeStyles-text-4 MuiTypography-button"
+    >
+      Mock button
+    </span>
+  </div>
+</DocumentFragment>
+`;
