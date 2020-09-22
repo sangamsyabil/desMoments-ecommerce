@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Text renders correctly 1`] = `
+<DocumentFragment>
+  <span
+    class="MuiTypography-root makeStyles-text-1 makeStyles-text-2 MuiTypography-button"
+  >
+    Mock button
+  </span>
+</DocumentFragment>
+`;

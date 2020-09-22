@@ -39,6 +39,7 @@ let muiTheme: Theme = createMuiTheme({
     },
     text: {
       primary: colors.primaryColor,
+      secondary: colors.white,
     },
   },
   props: {
